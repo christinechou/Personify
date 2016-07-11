@@ -27,10 +27,10 @@ Once the project moves into development, the press release can be used as a touc
  
 
 ## Summary ##
-  > Narrative analyzes given text and provides insights about the emotional, social and writing styles reflected in that text. This can be used for a variety of business or personal reasons including self-branding and marketing/PR communication efforts. Using Watsons's Tone Analyzer API, Narrative provides scores based on the text input separated into three dimensions: emotional, social, and writing style.  The emotional score is based on psychology models of measuring emotions such as anger, fear, anticipation, surprise, joy, sadness, trust, and disgust.  Social aspects capture the author's personality through the big five personality model. Finally, writing style and tone are measured on how analytical, confident, and tentative the writer's writing is.  Taken together, this tool can be used to analyze the underlying message of the text and adjust it to reflect desired tones.  For example, a highly confident yet tentative email to your roommate may suggest a certain propensity towards passive aggressiveness - good news is this can stop you before sending it and perhaps provide you with a starting point to discuss it with him/her in person. 
+  > Narrative analyzes given text and provides insights about the emotional, social and writing styles reflected in that text. This can be used for a variety of business or personal reasons including self-branding or marketing/PR communication efforts. Using Watsons's Tone Analyzer API, Narrative provides scores based on the text input separated into three dimensions: emotional, social, and writing style.  The emotional score is based on psychology models of measuring emotions such as anger, fear, anticipation, surprise, joy, sadness, trust, and disgust.  Social aspects capture the author's personality through the big five personality model. Finally, writing style and tone are measured on how analytical, confident, and tentative the writer's writing is.  Taken together, this tool can be used to analyze the underlying message of the text so you can adjust it to reflect desired tones.  For example, you may know that your readers are more extroverted and open to new experiences, so you can tailor your message to that specific audience.  Or, your highly confident yet tentative email to your roommate may suggest a certain propensity towards passive aggressiveness - good news is this will probably stop you from sending it, and perhaps - even better - provide you with a starting point to discuss it with him/her in person.
 
 ## Problem ##
-  > A reader can be immediately turned off by the first few sentences of written text. How a reader feels when reading an article, speech, or personal email is hard to describe, but it can leave an impression the author did not intend to make.
+  > A reader can be immediately turned off by the first few sentences of written text whether it was intended by the author or not. How a reader feels when reading an article, speech, or personal email is difficult to describe but its effects can distract him/her from the intended message or keep him/her from finishing it altogether.
 
 ## Solution ##
   > Helps you convey a message that isn't taken the wrong way.
@@ -41,8 +41,8 @@ Once the project moves into development, the press release can be used as a touc
 ## How to Get Started ##
   > Paste in your text and get results immediately.  View your iterations on one page to see how they have improved.
 
-## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+<!-- ## Customer Quote ##
+  > '' -->
 
 ## Closing and Call to Action ##
-  > Check out Watsons's 
+  > Check out Watsons's API for more information on how AI is used to extract tone from written text.
