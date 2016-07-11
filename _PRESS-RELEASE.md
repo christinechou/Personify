@@ -1,5 +1,4 @@
-# Project Name #
-Narrative
+# Narrative #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -17,12 +16,11 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## Heading ##
-  <!-- > Name the product in a way the reader (i.e. your target customers) will understand. -->
+## Mission ##
   > A tool that analyzes the emotional tone of written text
 
 
-## Sub-Heading ##
+## Uses ##
   > For organizations or every day people who want to refine the tone of their message 
  
 
@@ -35,7 +33,7 @@ Once the project moves into development, the press release can be used as a touc
 ## Solution ##
   > Helps you convey a message that isn't taken the wrong way.
 
-## Quote from You ##
+## Slogan ##
   > Tell the narrative you want to tell.
 
 ## How to Get Started ##
@@ -44,5 +42,5 @@ Once the project moves into development, the press release can be used as a touc
 <!-- ## Customer Quote ##
   > '' -->
 
-## Closing and Call to Action ##
+## References ##
   > Check out Watsons's API for more information on how AI is used to extract tone from written text.
