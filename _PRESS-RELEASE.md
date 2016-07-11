@@ -1,4 +1,5 @@
 # Project Name #
+Narrative
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -17,28 +18,31 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  <!-- > Name the product in a way the reader (i.e. your target customers) will understand. -->
+  > A tool that analyzes the emotional tone of written text
+
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > For organizations or every day people who want to refine the tone of their message 
+ 
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > Narrative analyzes given text and provides insights about the emotional, social and writing styles reflected in that text. This can be used for a variety of business or personal reasons including self-branding and marketing/PR communication efforts. Using Watsons's Tone Analyzer API, Narrative provides scores based on the text input separated into three dimensions: emotional, social, and writing style.  The emotional score is based on psychology models of measuring emotions such as anger, fear, anticipation, surprise, joy, sadness, trust, and disgust.  Social aspects capture the author's personality through the big five personality model. Finally, writing style and tone are measured on how analytical, confident, and tentative the writer's writing is.  Taken together, this tool can be used to analyze the underlying message of the text and adjust it to reflect desired tones.  For example, a highly confident yet tentative email to your roommate may suggest a certain propensity towards passive aggressiveness - good news is this can stop you before sending it and perhaps provide you with a starting point to discuss it with him/her in person. 
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > A reader can be immediately turned off by the first few sentences of written text. How a reader feels when reading an article, speech, or personal email is hard to describe, but it can leave an impression the author did not intend to make.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > Helps you convey a message that isn't taken the wrong way.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > Tell the narrative you want to tell.
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Paste in your text and get results immediately.  View your iterations on one page to see how they have improved.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Check out Watsons's 
