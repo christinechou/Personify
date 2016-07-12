@@ -10,4 +10,12 @@ var sentimentSchema = new Schema({
 
 var Sentiment = mongoose.model('Sentiment', sentimentSchema);
 
+// Controller
+var allSentiment = function(req, res, next) {
+  
+}
+
+
+
+
 module.exports = Sentiment;

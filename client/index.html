@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html ng-app='narrative'>
+<html>
   <head>
     <meta charset="utf-8">
     <title>Narrative</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <!-- Require bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
-    <h1>Narrative</h1>
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
 
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/angular/angular-animate/angular-animate.js"></script>
+  </head>
+  <body ng-app='narrative'>
+    <script src="app/text/text.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/sentiment/sentiment.js"></script>
+
+    <h1>Narrative</h1>
+    <div ng-controller="NarrativeCtrl">
+      <h2>{{message}}</h2>
+    </div>
     <div ng-view></div>
 
 
 
-    <script src="app/app.js"></script>
-    <script src="app/text.js"></script>
-    <script src="app/sentiment/sentiment.js"></script>
-    <!-- services -->
 
 
 

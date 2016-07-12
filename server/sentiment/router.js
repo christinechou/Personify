@@ -3,6 +3,10 @@ var sentimentRouter = require('express').Router();
 var request = require('request');
 var auth = require('../config/config');
 
+// sentimentRouter.get('/', function(req, res) {
+//   res.send('response');
+// })
+
 sentimentRouter.get('/sentiment', function(req, res) {
   res.send('response');
 })

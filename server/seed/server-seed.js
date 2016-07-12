@@ -90,7 +90,7 @@ var results = {
 };
 
 Sentiment.find().exec()
-  .then(function(results) {
+  .then(function(tone) {
     if (results.length === 0) {
       Sentiment.create({
         title: 'Trump Speech', 
