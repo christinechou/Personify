@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 
 var sentimentSchema = new Schema({
   title: { type: String, required: true, unique: true },
+  text: { type: String, required: true },
   emotion: { type: Array },
   language: { type: Array },
   social: { type: Array }

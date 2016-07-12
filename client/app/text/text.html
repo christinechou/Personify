@@ -7,7 +7,8 @@
 
 
   <form name='moodulator' ng-submit='generate()'>
-    <input type="text" name="title">
-    <input type="text" name="blurb">
+    <input type="text" placeholder="Name" name="title" ng-model="sentiment.title" required> 
+    <textarea type="text" placeholder="Insert your text here" name="blurb" ng-model="sentiment.text" required></textarea>
+    <button type="submit" value='Sentiment' ng-disabled='moodulator.$invalid'>Generate</button>
   </form>
 </div>
