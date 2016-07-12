@@ -25,8 +25,7 @@ sentimentRouter.post('/sentiment', function(req, res) {
       res.status(500).send('Post error.')
     } else {
       var tones = body.document_tone.tone_categories
-      console.log(tones[0].tones, tones[1].tones, tones[2].tones);
-      res.send(body);
+      res.send([tones[0].tones, tones[1].tones, tones[2].tones]);
     }
   });
 });

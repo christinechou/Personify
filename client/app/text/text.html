@@ -1,14 +1,20 @@
 <div ng-controller="TextCtrl">
-  <div class='navigation'>
+  <div class='navigation wrapper'>
     <ul>
       <li><a href="#/sentiment">Collection</a></li>
     </ul>
   </div>
 
 
-  <form name='moodulator' ng-submit='generate()'>
-    <input type="text" placeholder="Name" name="title" ng-model="sentiment.title" required> 
-    <textarea type="text" placeholder="Insert your text here" name="blurb" ng-model="sentiment.text" required></textarea>
-    <button type="submit" value='Sentiment' ng-disabled='moodulator.$invalid'>Generate</button>
+  <form name='moodulator' class='wrapper' >
+  <label class="textfield">
+    <input type="text" id='sentiment-title' name="title" ng-model="sentiment.title" required /> 
+    <span class ="textfield__label"> Name </span>
+  </label>  
+    <label class="textfield" ng-model="sentiment.text" required>
+      <textarea name='text'></textarea>
+      <span class="textfield__label">Text</span>
+    </label>
+    <button type="submit" value='Generate' ng-click='generate(title, text)'>Generate</button>
   </form>
 </div>

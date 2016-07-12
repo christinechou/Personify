@@ -13,7 +13,7 @@ angular.module('narrative.sentiment', ['narrative.text'])
       data: text
     })
     .then(function (resp) {
-      console.log('RESP:',resp)
+      console.log('RESP:',resp.data)
       return resp.data;
     });
   };
