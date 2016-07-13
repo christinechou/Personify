@@ -43,4 +43,4 @@ Once the project moves into development, the press release can be used as a touc
   > '' -->
 
 ## References ##
-  > Check out Watsons's API for more information on how AI is used to extract tone from written text.
+  > Check out Watsons's API for more information on how AI is used to extract tone from written text. For more information on understanding your tone score, visit: http://www.ibm.com/watson/developercloud/doc/tone-analyzer/understanding-tone.shtml

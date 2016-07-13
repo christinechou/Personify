@@ -1,28 +1,45 @@
-<div id='container' ng-controller='SentimentCtrl'>
+<div id='container' ng-controller='SentimentCtrl' ng-init='initializeResults()'>
+<!-- ng-init='initializeResults()' -->
    <div class='navigation wrapper'>
       <ul>
-        <li><a href='#/sentiment'> Collection</a></li>
+       <!--  <li><a href='#/sentiment'> Collection</a></li> -->
         <li><a href='#/'>Generate</a> | <li>
       </ul>
   </div>
 
-  <h1> Sentiment working </h1>  
+  <h3> Overview </h3>  
+<section class='wrapper'>
 
-  <div class='wrapper'>
+  <hr>
+  <h4>{{data.title}}</h4>
+
     <pre>Emotion</pre> 
     <section class="grid wrapper ta-center">
-      <div>Anger</div>
-      <div>Fear</div>
-      <div>Joy</div>
+
+      <div><h2 class="data">{{data.tones[0][0].score}}</h2>Anger</div>
+      <div><h2 class="data">{{data.tones[0][3].score}}</h2>Joy</div>
+      <div><h2 class="data">{{data.tones[0][2].score}}</h2>Fear</div>
+    
     </section>
     <section class="grid wrapper ta-center">
-      <div>Disgust</div>
-      <div>Sadness</div>
+      <div><h2 class="data">{{data.tones[0][1].score}}</h2>Disgust</div>
+      <div><h2 class="data">{{data.tones[0][4].score}}</h2>Sadness</div>
     </section>
 
     <pre>Social</pre> 
+    <section class="grid ta-center">
+      <div><h2 class="data">{{data.tones[2][0].score}}</h2>Openness</div>
+      <div><h2 class="data">{{data.tones[2][1].score}}</h2>Conscientiousness</div>
+      <div><h2 class="data">{{data.tones[2][2].score}}</h2>Extraversion</div>
+    </section>
+    <section class="grid wrapper ta-center">
+      <div><h2 class="data">{{data.tones[2][3].score}}</h2>Agreeableness</div>
+      <div><h2 class="data">{{data.tones[2][4].score}}</h2>Emotional Range</div>
+    </section>
 
-    <pre>Writing Style</pre> 
+    <!-- <pre>Writing Style</pre>  -->
 
-  </div>
+</section>
 </div>
+
+

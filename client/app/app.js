@@ -1,4 +1,5 @@
 angular.module('narrative', [
+  'narrative.services',
   'narrative.text',
   'narrative.sentiment',
   'ngRoute'
@@ -18,7 +19,9 @@ angular.module('narrative', [
 })
 
 .controller('NarrativeCtrl', function($scope) {
-  $scope.message = 'HelloooooooOoooOOOOoo ';
+  //this will contain the three dimensions of tone:
+  $scope.collection = {};
+  $scope.message = 'hello';
   $scope.updateMsg = function(newMsg) {
     $scope.message = newMsg;
   }

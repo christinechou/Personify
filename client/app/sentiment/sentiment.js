@@ -1,37 +1,26 @@
-angular.module('narrative.sentiment', ['narrative.text'])
-.factory('Sentiment', function($http) {
-  var getAll = function() {
-    return $http({
-      method: 'GET',
-      url: 'api/sentiment' //????
-    })
-  };
-  var postOne = function(text) {
-    return $http({
-      method: 'POST',
-      url: 'api/sentiment',
-      data: text
-    })
-    .then(function (resp) {
-      console.log('RESP:',resp.data)
-      return resp.data;
-    });
-  };
+angular.module('narrative.sentiment', ['narrative.services', 'narrative.text'])
 
-  return {
-    getAll: getAll,
-    postOne: postOne
-  };
-})
+.controller('SentimentCtrl', function($scope, $window, $location, Sentiment) {
+  // $scope.sentiment = TextCtrl.sentiment;
+  $scope.data = {}
 
-.controller('SentimentCtrl', function($scope, $window, $location) {
-  // $scope.data = {};
-  // Sentiment.getAll()
-
-  // $scope.sentiment = {};
-  // $scope.generate = function() {
-  //   $scope.loading = true;
-  //   Sentiment.getAll
-  // }
+  $scope.initializeResults = function() {
+    var x = Sentiment.getResults();
+    console.log('x.tones',x.tones)
+    var percents = x.tones.map(function(obj) {
+      return obj.map(function(val) {
+          return {
+            score: Math.round(val.score*10) + '%',
+            tone_id: val.tone_id,
+            tone_name: val.tone_name
+          }
+        });
+      });
+    console.log("percents,",percents)
+    x.tones = percents;
+    $scope.data = x;
+    console.log('scope data',$scope.data)
+  }
+  // $scope.initializeResults();
 
 })

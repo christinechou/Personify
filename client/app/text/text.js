@@ -1,14 +1,18 @@
-angular.module('narrative.text', ['narrative.sentiment'])
+angular.module('narrative.text', ['narrative.services'])
 
 
-.controller('TextCtrl', function($scope, Sentiment) { //injecting factory
-  $scope.sentiment = {};
+.controller('TextCtrl', function($scope, $location, Sentiment) { //injecting factory
+  $scope.sentiment = {};   
+  // will look like: { title: 'xyz', text: 'string', text: 'text to analyze here'}
+
   $scope.generate = function(title, text) {
-    console.log('generate working')
     // $scope.loading = true;
     Sentiment.postOne($scope.sentiment.text)
-      .then(function() {
-        console.log('success in posting text: ',title, text)
+      .then(function(tones) {
+        $scope.sentiment.tones = tones;
+        Sentiment.displayResults($scope.sentiment);
+        console.log('$scope.sentiment: ',$scope.sentiment)
+        $location.path('/sentiment');
       })
-  }
+  };
 })

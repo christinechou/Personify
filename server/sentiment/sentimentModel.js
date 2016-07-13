@@ -13,7 +13,7 @@ var Sentiment = mongoose.model('Sentiment', sentimentSchema);
 
 // Controller
 var allSentiment = function(req, res, next) {
-  
+  console.log('all sentiment running')
 }
 
 

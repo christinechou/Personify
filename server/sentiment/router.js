@@ -8,16 +8,18 @@ var auth = require('../config/config');
 // })
 
 sentimentRouter.get('/sentiment', function(req, res) {
+  
   res.send('response');
 })
 
 sentimentRouter.post('/sentiment', function(req, res) {
+  console.log('req.body.text: ',req.body.text, 'req.params.id:',req.params.id)
   request({
     method: 'POST', 
     uri: 'https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2016-05-18&sentences=false',
     auth: auth, 
     json: {
-      text: 'Hello world.'
+      text: 'req.body.text'
     }
   }, function(err, response, body) {
     if (err) {

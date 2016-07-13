@@ -5,16 +5,20 @@
     </ul>
   </div>
 
+<h1 >Narrative</h1>
 
   <form name='moodulator' class='wrapper' >
   <label class="textfield">
     <input type="text" id='sentiment-title' name="title" ng-model="sentiment.title" required /> 
     <span class ="textfield__label"> Name </span>
   </label>  
-    <label class="textfield" ng-model="sentiment.text" required>
-      <textarea name='text'></textarea>
+    <label class="textfield"  >
+      <textarea name='text' ng-model="sentiment.text" required></textarea>
       <span class="textfield__label">Text</span>
     </label>
-    <button type="submit" value='Generate' ng-click='generate(title, text)'>Generate</button>
+    <button type="submit" value='Generate' ng-click='generate(text)' ng-disabled="moodulator.$invalid">Generate</button>
+<!--     <p>{{message}}</p>
+ -->    
+ 
   </form>
 </div>
