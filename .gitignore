@@ -36,3 +36,6 @@ bower_components/
 
 # API
 server/config/config.js
+
+.DS_Store
+client/.DS_Store
