@@ -1,5 +1,7 @@
-var sentimentRouter = require('../sentiment/router');
+const path = require('path');
+const sentimentRouter = require('../sentiment/router');
 
-module.exports = function(app) {
-  app.use('/api', sentimentRouter);
+module.exports = function (app) {
+  app.use('/api/sentiment', sentimentRouter);
+
 };

@@ -1,15 +1,21 @@
-var express = require('express');
+var app = require('express')();
+var server = require('http').Server(app);
 
-var app = express();
 
-require('./config/mongoose');
+require('./config/database');
+// Invoke middleware function on app to 'use' all the middleware functions
 require('./config/middleware')(app);
+// Invoke routers function on app to provide access to all routes defined
 require('./config/routes')(app);
 
 require('./seed/server-seed.js');
 
-app.listen(3000, function() {
-  console.log('Listening on 3000');
+app.listen(3000, function(err) {
+  if (err) {
+    console.log('Server could not connect:',err)
+  } else {
+    console.log('Listening on 3000');
+  }
 })
 
 module.exports = app;

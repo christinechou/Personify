@@ -1,22 +1,10 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+var Sentiment = function(db, DataTypes) {
+  return db.define('Sentiment', {
+    text: { type: DataTypes.STRING, required: true },
+    personas: { type: DataTypes.JSON(DataTypes.TEXT) },
+    emotion: { type: DataTypes.JSON(DataTypes.TEXT) }
+  });
 
-var sentimentSchema = new Schema({
-  title: { type: String, required: true, unique: true },
-  text: { type: String, required: true },
-  emotion: { type: Array },
-  language: { type: Array },
-  social: { type: Array }
-});
-
-var Sentiment = mongoose.model('Sentiment', sentimentSchema);
-
-// Controller
-var allSentiment = function(req, res, next) {
-  console.log('all sentiment running')
-}
-
-
-
+};
 
 module.exports = Sentiment;
