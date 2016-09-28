@@ -22,17 +22,17 @@
       <center><img src="{{data.tones.persona[0][2]}}" alt="Could not load image" /></center>
       <h3> {{data.tones.persona[0][0]}}</h3>
 
-      <h6>Others:</h6>
-      <div ng-repeat="persona in data.tones.persona" ng-if="$index >= 1 && $index < 5">
-        <div>
-          <span class="data">{{persona[1]}}</span>{{persona[0]}}
+      <h7 class="fs-base">Others:</h7>
+      <section class="grid wrapper-bottom ta-center">
+        <div ng-repeat="persona in data.tones.persona" ng-if="$index >= 1 && $index < 5">
+          <div>
+            <h3 class="data-small">{{persona[1]}}</h3>{{persona[0]}}
+          </div>
         </div>
-      </div>
 
+      </section>
     </section>
-    <section class="grid wrapper ta-center">
 
-    </section>
 
     <pre>Personality</pre>
     <section class="grid ta-center">
