@@ -1,7 +1,7 @@
 <div ng-controller="TextCtrl">
   <div class='navigation wrapper'>
     <ul>
-      <li><a href="#/sentiment">Collection</a></li>
+      <!-- <li><a href="#/sentiment">Collection</a></li> -->
     </ul>
   </div>
 
@@ -9,16 +9,16 @@
 
   <form name='moodulator' class='wrapper' >
   <label class="textfield">
-    <input type="text" id='sentiment-title' name="title" ng-model="sentiment.title" required /> 
-    <span class ="textfield__label"> Name </span>
-  </label>  
+    <input type="text" placeholder="Eleanor Roosevelt" id='sentiment-title' name="author" ng-model="sentiment.title" required />
+    <span class ="textfield__label"> Author </span>
+  </label>
     <label class="textfield"  >
-      <textarea name='text' ng-model="sentiment.text" required></textarea>
+      <textarea name='text' placeholder="The future belongs to those who believe in the beauty of their dreams." ng-model="sentiment.text" required></textarea>
       <span class="textfield__label">Text</span>
     </label>
     <button type="submit" value='Generate' ng-click='generate(text)' ng-disabled="moodulator.$invalid">Generate</button>
 <!--     <p>{{message}}</p>
- -->    
- 
+ -->
+
   </form>
 </div>
