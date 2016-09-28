@@ -107,7 +107,6 @@ module.exports = {
     })
     .then((data2) => {
       result['personality'] = data2;
-      console.log('Sending final results:',result)
       res.send(result)
     })
     .catch((err) => {
