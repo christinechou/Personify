@@ -10,11 +10,11 @@ require('./config/routes')(app);
 
 require('./seed/server-seed.js');
 
-app.listen(3000, function(err) {
+app.listen(process.env.$PORT || 3000, function(err) {
   if (err) {
     console.log('Server could not connect:',err)
   } else {
-    console.log('Listening on 3000');
+    console.log(`Listening on port ${process.env.$PORT || 3000}`);
   }
 })
 

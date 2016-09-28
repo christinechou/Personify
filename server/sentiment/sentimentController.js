@@ -10,7 +10,7 @@ var auth = require('../config/config');
  * @param {object} object containing values to sort
  * @returns {Array} array of sorted items in [[key,value],[key,value],...] format.
  */
-var sortPersonas = function(personas) {
+var sortPersonas = (personas) => {
   var items = [];
   var image = {
     mediator: '../../styles/assets/infp-mediator.png',
@@ -27,6 +27,7 @@ var sortPersonas = function(personas) {
     entertainer: '../../styles/assets/esfp-entertainer.png',
     defender: '../../styles/assets/isfj-defender.png',
     logistician: '../../styles/assets/intp-logistician.png',
+    logician: '../../styles/assets/istj-logician.png',
     consul: '../../styles/assets/esfj-consul.png',
 
   }
@@ -42,7 +43,21 @@ var sortPersonas = function(personas) {
   return items;
 }
 
-
+/**
+ * Reduce the sentence count so as not to exhaust API limit per month
+ * @param {string} user input
+ * @returns {string} string limited to three sentences
+ */
+ var minimizeSearch = (string) => {
+   var min = string.split('.');
+   var actualSentences = []
+   for (var i = 0; i < min.length; i++) {
+     if (min[i].length > 0) {
+       actualSentences.push(min[i]);
+     }
+   }
+   return actualSentences.length > 2 ? actualSentences.slice(0,3).join('.') : actualSentences.join('.')
+ }
 
 
 module.exports = {
@@ -52,10 +67,12 @@ module.exports = {
 
   post: (req, res) => {
 
-    var getPersona = function() {
+    var text = minimizeSearch(req.body.text);
+
+    var getPersona = () => {
       var paramsPersona = JSON.stringify({
         api_key: auth.apiKey,
-        data: req.body.text,
+        data: text,
         threshold: 0.05,
         persona: true
       });
@@ -75,10 +92,10 @@ module.exports = {
       })
     };
 
-    var getPersonality = function() {
+    var getPersonality = () => {
       var params = JSON.stringify({
         api_key: auth.apiKey,
-        data: req.body.text,
+        data: text,
         threshold: 0.05
       });
       return new Promise((resolve, reject) => {
@@ -103,6 +120,7 @@ module.exports = {
     getPersona()
     .then((data1) => {
       result['persona'] = sortPersonas(data1);
+      console.log(result);
       return getPersonality();
     })
     .then((data2) => {
@@ -112,35 +130,6 @@ module.exports = {
     .catch((err) => {
       console.log('Promise chain failed:',err)
     })
-    // Request for persona
-    // request( {
-    //   method: 'POST',
-    //   uri: 'https://apiv2.indico.io/personality',
-    //   contentType: "application/json; charset=utf-8",
-    //   body: paramsPersona
-    // }, function(err, response, body) {
-    //   if (err) {
-    //     console.error(err);
-    //     res.status(500).send('Post error.')
-    //   } else {
-    //     res.send(JSON.parse(body).results);
-    //   }
-    // } );
-
-    // Request for personality
-    // request( {
-    //   method: 'POST',
-    //   uri: 'https://apiv2.indico.io/personality',
-    //   contentType: "application/json; charset=utf-8",
-    //   body: params
-    // }, function(err, response, body) {
-    //   if (err) {
-    //     console.error(err);
-    //     res.status(500).send('Post error.')
-    //   } else {
-    //     res.send(JSON.parse(body).results);
-    //   }
-    // } );
 
 
   }
