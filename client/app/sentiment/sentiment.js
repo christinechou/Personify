@@ -6,21 +6,20 @@ angular.module('narrative.sentiment', ['narrative.services', 'narrative.text'])
 
   $scope.initializeResults = function() {
     var x = Sentiment.getResults();
-    console.log('x.tones',x.tones)
-    var percents = x.tones.map(function(obj) {
-      return obj.map(function(val) {
-          return {
-            score: Math.round(val.score*10) + '%',
-            tone_id: val.tone_id,
-            tone_name: val.tone_name
-          }
-        });
-      });
-    console.log("percents,",percents)
-    x.tones = percents;
+    var persona = x.tones.persona;
+    var personality = x.tones.personality;
+
+    for (var i = 0; i < persona.length; i++) {
+
+      var newValue = Math.round(persona[i][1]*100) + '%';
+      persona[i][1] = newValue;
+    };
+
+    for (var key in x.tones.personality) {
+      var newValue = Math.round(personality[key]*100) + '%';
+      personality[key] = newValue;
+    }
     $scope.data = x;
-    console.log('scope data',$scope.data)
   }
-  // $scope.initializeResults();
 
 })

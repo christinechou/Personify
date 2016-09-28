@@ -3,43 +3,50 @@
    <div class='navigation wrapper'>
       <ul>
        <!--  <li><a href='#/sentiment'> Collection</a></li> -->
-        <li><a href='#/'>Generate</a> | <li>
+        <li><a href='#/'>Generate Another</a>  <li>
       </ul>
   </div>
 
-  <h3> Overview </h3>  
+  <h3> Overview </h3>
 <section class='wrapper'>
 
-  <hr>
-  <h4>{{data.title}}</h4>
 
-    <pre>Emotion</pre> 
-    <section class="grid wrapper ta-center">
+  <blockquote>
+    {{data.text}} - <span class="fs-small"> {{data.title}}</span>
+  </blockquote>
 
-      <div><h2 class="data">{{data.tones[0][0].score}}</h2>Anger</div>
-      <div><h2 class="data">{{data.tones[0][3].score}}</h2>Joy</div>
-      <div><h2 class="data">{{data.tones[0][2].score}}</h2>Fear</div>
-    
+    <pre>Personas</pre>
+    <section class="ta-center">
+      <h6>MOST LIKELY PERSONA</h6>
+
+      <center><img src="{{data.tones.persona[0][2]}}" alt="Could not load image" /></center>
+      <h3> {{data.tones.persona[0][0]}}</h3>
+
+      <h6>Others:</h6>
+      <div ng-repeat="persona in data.tones.persona" ng-if="$index >= 1 && $index < 5">
+        <div>
+          <span class="data">{{persona[1]}}</span>{{persona[0]}}
+        </div>
+      </div>
+
     </section>
     <section class="grid wrapper ta-center">
-      <div><h2 class="data">{{data.tones[0][1].score}}</h2>Disgust</div>
-      <div><h2 class="data">{{data.tones[0][4].score}}</h2>Sadness</div>
+
     </section>
 
-    <pre>Social</pre> 
+    <pre>Personality</pre>
     <section class="grid ta-center">
-      <div><h2 class="data">{{data.tones[2][0].score}}</h2>Openness</div>
-      <div><h2 class="data">{{data.tones[2][1].score}}</h2>Conscientiousness</div>
-      <div><h2 class="data">{{data.tones[2][2].score}}</h2>Extraversion</div>
+      <div><h2 class="data">{{data.tones.personality.openness}}</h2>Openness</div>
+      <div><h2 class="data">{{data.tones.personality.conscientiousness}}</h2>Conscientiousness</div>
+
     </section>
     <section class="grid wrapper ta-center">
-      <div><h2 class="data">{{data.tones[2][3].score}}</h2>Agreeableness</div>
-      <div><h2 class="data">{{data.tones[2][4].score}}</h2>Emotional Range</div>
+      <div><h1 class="data">{{data.tones.personality.agreeableness}}</h1>Agreeableness</div>
+      <div><h1 class="data">{{data.tones.personality.extraversion}}</h1>Extraversion</div>
     </section>
-
-    <!-- <pre>Writing Style</pre>  -->
 
 </section>
+<footer class="fs-smallest ta-center">
+  Made artisanally in SF | Christine Chou ♥
+</footer>
 </div>
-
-
