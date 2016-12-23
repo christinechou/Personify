@@ -17,30 +17,22 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Mission ##
-  > A tool that analyzes the emotional tone of written text
+  > To have fun with personalities using large amounts of text
 
 
 ## Uses ##
-  > For organizations or every day people who want to refine the tone of their message 
+  > The sorting hat for personalities
  
 
 ## Summary ##
-  > Narrative analyzes given text and provides insights about the emotional, social and writing styles reflected in that text. This can be used for a variety of business or personal reasons including self-branding or marketing/PR communication efforts. Using Watsons's Tone Analyzer API, Narrative provides scores based on the text input separated into three dimensions: emotional, social, and writing style.  The emotional score is based on psychology models of measuring emotions such as anger, fear, anticipation, surprise, joy, sadness, trust, and disgust.  Social aspects capture the author's personality through the big five personality model. Finally, writing style and tone are measured on how analytical, confident, and tentative the writer's writing is.  Taken together, this tool can be used to analyze the underlying message of the text so you can adjust it to reflect desired tones.  For example, you may know that your readers are more extroverted and open to new experiences, so you can tailor your message to that specific audience. 
-
-## Problem ##
-  > A reader can be immediately turned off by the first few sentences of written text whether it was intended by the author or not. How a reader feels when reading an article, speech, or personal email is difficult to describe but its effects can distract him/her from the intended message or keep him/her from finishing it altogether.
-
-## Solution ##
-  > Helps you convey a message that isn't taken the wrong way.
-
-## Slogan ##
-  > Tell the narrative you want to tell.
+  > Persona is based on the 16 Myer's Briggs personalities.  The app analyzes user input text and displays the results 
 
 ## How to Get Started ##
-  > Paste in your text and get results immediately.  View your iterations on one page to see how they have improved.
+  > `npm start`
+  > Open `http://localhost:3000` in your browser
 
 <!-- ## Customer Quote ##
   > '' -->
 
 ## References ##
-  > Check out Watsons's API for more information on how AI is used to extract tone from written text. For more information on understanding your tone score, visit: http://www.ibm.com/watson/developercloud/doc/tone-analyzer/understanding-tone.shtml
+  > Check out Watsons's API for more information on how AI is used to extract tone from written text. 
