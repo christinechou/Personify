@@ -11,7 +11,6 @@ angular.module('narrative.text', ['narrative.services'])
       .then(function(tones) {
         $scope.sentiment.tones = tones;
         Sentiment.displayResults($scope.sentiment);
-        //$scope.sentiment: [Object] {text: "TESTING!!!!!", title: "asdf", tones: Object}
         $location.path('/sentiment');
       })
   };

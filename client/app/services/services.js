@@ -3,16 +3,13 @@ angular.module('narrative.services', ['narrative.text', 'narrative.sentiment'])
 .factory('Sentiment', function($http) {
 
   var results;
-
   var displayResults = function(data) {
     results = data;
   };
   var getResults = function() {
-
     return results;
   };
 
-// Pulls data from database on server
   var getAll = function() {
     return $http({
       method: 'GET',
@@ -38,9 +35,9 @@ angular.module('narrative.services', ['narrative.text', 'narrative.sentiment'])
   };
 
   return {
-    getResults: getResults,
-    getAll: getAll,
-    displayResults: displayResults,
-    postOne: postOne
+    getResults: getResults, // Grabs data from results variable
+    getAll: getAll, // Grabs data from db via server
+    displayResults: displayResults, // Assigns sentiment data to results variable
+    postOne: postOne // Makes a call to sentiment API to get sentiment scores
   };
 })

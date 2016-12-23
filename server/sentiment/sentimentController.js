@@ -120,7 +120,6 @@ module.exports = {
     getPersona()
     .then((data1) => {
       result['persona'] = sortPersonas(data1);
-      console.log(result);
       return getPersonality();
     })
     .then((data2) => {
